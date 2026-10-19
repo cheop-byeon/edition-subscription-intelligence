@@ -30,5 +30,6 @@ export default {async fetch(request){
  return json({error:'Method not allowed.'},405);
 }};
 '''
+(ROOT/'worker').mkdir(parents=True,exist_ok=True)
 (ROOT/'worker/index.js').write_text(engine+'\n'+external_engine+'\nconst EXTERNAL='+external+';\nconst HTML='+html+';\nconst MODEL='+artifact+';\nconst RESEARCH='+research+';\n'+handler)
 print('Bundled frontend, inference engine, model, and research sources.')
