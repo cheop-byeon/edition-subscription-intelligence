@@ -1,0 +1,26 @@
+# Local environments and credentials
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.DS_Store
+.openai/hosting.json
+.openai/local/
+
+# Downloaded source data and benchmark rows remain local
+data/local_benchmark_profiles.json
+data/external/
+*.zip
+*.tar.gz
+
+# Generated deployment bundles and machine-local verification
+worker/index.js
+dist/
+artifacts/verification.json
+
+# Reproducible logs and local QA captures
+data/synthetic_experiment.csv
+*.jpg

@@ -1,0 +1,12 @@
+{
+  "name": "edition-subscription-intelligence",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Research-backed subscription offer portfolio MVP",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test:worker": "node tests/test_worker.mjs && node tests/test_external_worker.mjs",
+    "validate": "node scripts/validate-artifact.mjs",
+    "check:frontend": "node scripts/check-frontend.mjs"
+  }
+}

@@ -1,0 +1,17 @@
+.git
+.github
+.openai
+.venv
+__pycache__
+**/__pycache__
+*.pyc
+.env*
+data
+work
+outputs
+dist
+worker
+*.zip
+*.tar.gz
+*.jpg
+*.png

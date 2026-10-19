@@ -1,0 +1,4 @@
+# Optional training dependencies; serving the exported artifact needs only stdlib.
+numpy==2.5.4
+pandas==3.0.6
+scikit-learn==1.9.1
