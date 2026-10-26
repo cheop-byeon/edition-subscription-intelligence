@@ -1,0 +1,16 @@
+{
+  "version": "paywall-v2",
+  "description": "Learning policy for who sees which subscription offer and when; not Schibsted's production model.",
+  "control_fraction": 0.1,
+  "minimum_articles_in_session": 2,
+  "high_intent_threshold": 0.3,
+  "trial_threshold": 0.1,
+  "brands": {
+    "Aftenposten": {"currency": "NOK", "standard_price": 249, "trial_price": 49},
+    "VG": {"currency": "NOK", "standard_price": 129, "trial_price": 29},
+    "Bergens Tidende": {"currency": "NOK", "standard_price": 249, "trial_price": 49},
+    "E24": {"currency": "NOK", "standard_price": 299, "trial_price": 59},
+    "Aftonbladet": {"currency": "SEK", "standard_price": 129, "trial_price": 29},
+    "Svenska Dagbladet": {"currency": "SEK", "standard_price": 249, "trial_price": 49}
+  }
+}

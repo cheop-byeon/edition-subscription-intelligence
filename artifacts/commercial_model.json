@@ -1,0 +1,3703 @@
+{
+  "version": "commercial-logistic-seed42",
+  "data_kind": "simulated commercial lifecycle data",
+  "seed": 42,
+  "features": [
+    "visits_30d",
+    "active_days_30d",
+    "premium_reads_30d",
+    "tenure_months",
+    "days_since_visit",
+    "payment_failures_90d"
+  ],
+  "brands": [
+    "Aftenposten",
+    "VG",
+    "Bergens Tidende",
+    "E24"
+  ],
+  "models": {
+    "sales": {
+      "intercept": -2.2602441077171735,
+      "weights": [
+        0.3717712833655921,
+        0.622879901428977,
+        0.7732038398144204,
+        -0.07059174533999146,
+        -0.5311890942782351,
+        -0.06949041325771936
+      ],
+      "mean": [
+        12.0295,
+        14.773125,
+        4.0305,
+        30.159,
+        14.982,
+        0.24375
+      ],
+      "scale": [
+        3.43280202604227,
+        8.935583513927588,
+        2.0152096044829038,
+        17.710193928921324,
+        8.94792858710876,
+        0.47941207483752035
+      ],
+      "metrics": {
+        "auc": 0.8021007748120424,
+        "brier": 0.10013373348394689,
+        "prevalence": 0.142,
+        "test_rows": 2000
+      },
+      "target": "subscription within 30 days"
+    },
+    "churn": {
+      "intercept": -1.6782707638712988,
+      "weights": [
+        -0.3783358695735209,
+        -0.6990302681007577,
+        -0.17502358326419612,
+        -0.32913617846791426,
+        0.897150253660632,
+        0.6210985564188198
+      ],
+      "mean": [
+        12.0295,
+        14.773125,
+        4.0305,
+        30.159,
+        14.982,
+        0.24375
+      ],
+      "scale": [
+        3.43280202604227,
+        8.935583513927588,
+        2.0152096044829038,
+        17.710193928921324,
+        8.94792858710876,
+        0.47941207483752035
+      ],
+      "metrics": {
+        "auc": 0.796947983663887,
+        "brier": 0.13067394579807223,
+        "prevalence": 0.206,
+        "test_rows": 2000
+      },
+      "target": "cancellation within 30 days"
+    }
+  },
+  "profiles": [
+    {
+      "id": "reader-0001",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 21.0,
+        "active_days_30d": 9.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0002",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 16.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0003",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 51.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0004",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 43.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0005",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 22.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0006",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0007",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0008",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0009",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 27.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0010",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 17.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0011",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0012",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0013",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 14.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 48.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0014",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0015",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 24.0,
+        "active_days_30d": 14.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0016",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0017",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 36.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0018",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 27.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0019",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 50.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0020",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 23.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0021",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 14.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0022",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0023",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 29.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0024",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 14.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0025",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0026",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 14.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0027",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 25.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0028",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 2.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0029",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 12.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0030",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 56.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0031",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0032",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 57.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0033",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 6.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0034",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 20.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0035",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0036",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 6.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 31.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0037",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0038",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 38.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0039",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 42.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0040",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 13.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0041",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0042",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 18.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 50.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0043",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 28.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0044",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 15.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0045",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 50.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0046",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 19.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0047",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 37.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0048",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0049",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0050",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0051",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 52.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0052",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 36.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0053",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 27.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 24.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0054",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0055",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 6.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0056",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 8.0,
+        "tenure_months": 4.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0057",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0058",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0059",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 4.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0060",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 17.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0061",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0062",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 34.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0063",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0064",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 20.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0065",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0066",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 6.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0067",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 3.0,
+        "days_since_visit": 15.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0068",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0069",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 19.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0070",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 37.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0071",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 38.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0072",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0073",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 28.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0074",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 37.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0075",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 12.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0076",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0077",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 10.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0078",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 19.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 29.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0079",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0080",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 35.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0081",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 8.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0082",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 5.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0083",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0084",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 16.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0085",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 17.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 10.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0086",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0087",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 7.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0088",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 60.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0089",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 36.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0090",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0091",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 4.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0092",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 39.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0093",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 36.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0094",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0095",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0096",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 14.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 56.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0097",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 45.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0098",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 0.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0099",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0100",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 42.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0101",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 55.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0102",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0103",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 5.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 26.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0104",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0105",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0106",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 56.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0107",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0108",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 41.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0109",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 31.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0110",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 8.0,
+        "tenure_months": 23.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0111",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 21.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0112",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 1.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0113",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 19.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0114",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 32.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0115",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 35.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0116",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 51.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0117",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 55.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0118",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 52.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0119",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0120",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0121",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 25.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0122",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0123",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 0.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0124",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 49.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0125",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 39.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0126",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0127",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 17.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0128",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0129",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 32.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0130",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 8.0,
+        "tenure_months": 22.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0131",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0132",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0133",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 19.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 45.0,
+        "days_since_visit": 15.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0134",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 44.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0135",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 6.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0136",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 4.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0137",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 23.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 27.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0138",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 36.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0139",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 55.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0140",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 41.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0141",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 39.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0142",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 30.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0143",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0144",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 18.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 28.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0145",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 10.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0146",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 50.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0147",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 10.0,
+        "tenure_months": 29.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0148",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 55.0,
+        "days_since_visit": 6.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0149",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 7.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0150",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 49.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0151",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 14.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 20.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0152",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 41.0,
+        "days_since_visit": 20.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0153",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 24.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0154",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0155",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 51.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0156",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 19.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0157",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 22.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0158",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0159",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0160",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 16.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0161",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0162",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0163",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 24.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0164",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0165",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0166",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 52.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0167",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0168",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 15.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0169",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 49.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0170",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 22.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0171",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0172",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0173",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 38.0,
+        "days_since_visit": 15.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0174",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0175",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 10.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 42.0,
+        "days_since_visit": 1.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0176",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 5.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 22.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0177",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0178",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 19.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 9.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0179",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 25.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0180",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 9.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0181",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 2.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0182",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 20.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0183",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 19.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0184",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 48.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0185",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0186",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 5.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0187",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0188",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0189",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 28.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 28.0,
+        "payment_failures_90d": 2.0
+      }
+    },
+    {
+      "id": "reader-0190",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 56.0,
+        "days_since_visit": 4.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0191",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 16.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 9.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0192",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 22.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 0.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0193",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 30.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 39.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0194",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 9.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0195",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 0.0,
+        "tenure_months": 14.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0196",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 21.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 35.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0197",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 6.0,
+        "days_since_visit": 15.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0198",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 5.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0199",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 19.0,
+        "days_since_visit": 18.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0200",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 17.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0201",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 2.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 6.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0202",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0203",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 5.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 2.0,
+        "days_since_visit": 3.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0204",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 25.0,
+        "days_since_visit": 30.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0205",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 3.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 24.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0206",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 15.0,
+        "active_days_30d": 20.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0207",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 6.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 22.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0208",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 1.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0209",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 42.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0210",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 2.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0211",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 45.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0212",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 41.0,
+        "days_since_visit": 25.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0213",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 43.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0214",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 4.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 11.0,
+        "days_since_visit": 16.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0215",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 7.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 41.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0216",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 60.0,
+        "days_since_visit": 10.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0217",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 26.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 10.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0218",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 6.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 32.0,
+        "days_since_visit": 7.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0219",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 0.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 20.0,
+        "days_since_visit": 12.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0220",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 12.0,
+        "active_days_30d": 25.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0221",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 8.0,
+        "active_days_30d": 18.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 5.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0222",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 16.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 58.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0223",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 12.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 47.0,
+        "days_since_visit": 0.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0224",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 8.0,
+        "tenure_months": 18.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0225",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 8.0,
+        "premium_reads_30d": 6.0,
+        "tenure_months": 14.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0226",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 14.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 28.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0227",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 17.0,
+        "active_days_30d": 23.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 17.0,
+        "days_since_visit": 14.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0228",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 8.0,
+        "days_since_visit": 20.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0229",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 29.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 33.0,
+        "days_since_visit": 27.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0230",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 13.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 54.0,
+        "days_since_visit": 13.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0231",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 17.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 44.0,
+        "days_since_visit": 29.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0232",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": false,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 3.0,
+        "tenure_months": 46.0,
+        "days_since_visit": 1.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0233",
+      "brand": "Aftenposten",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 7.0,
+        "active_days_30d": 21.0,
+        "premium_reads_30d": 7.0,
+        "tenure_months": 53.0,
+        "days_since_visit": 23.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0234",
+      "brand": "VG",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 13.0,
+        "active_days_30d": 15.0,
+        "premium_reads_30d": 4.0,
+        "tenure_months": 48.0,
+        "days_since_visit": 2.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0235",
+      "brand": "Bergens Tidende",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 2.0,
+        "active_days_30d": 11.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 10.0,
+        "days_since_visit": 11.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0236",
+      "brand": "E24",
+      "subscribed": false,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 24.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 24.0,
+        "days_since_visit": 21.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0237",
+      "brand": "Aftenposten",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 22.0,
+        "premium_reads_30d": 9.0,
+        "tenure_months": 15.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0238",
+      "brand": "VG",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 10.0,
+        "active_days_30d": 1.0,
+        "premium_reads_30d": 2.0,
+        "tenure_months": 38.0,
+        "days_since_visit": 8.0,
+        "payment_failures_90d": 0.0
+      }
+    },
+    {
+      "id": "reader-0239",
+      "brand": "Bergens Tidende",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": true,
+      "values": {
+        "visits_30d": 9.0,
+        "active_days_30d": 19.0,
+        "premium_reads_30d": 1.0,
+        "tenure_months": 59.0,
+        "days_since_visit": 5.0,
+        "payment_failures_90d": 1.0
+      }
+    },
+    {
+      "id": "reader-0240",
+      "brand": "E24",
+      "subscribed": true,
+      "consent": true,
+      "suppressed": false,
+      "values": {
+        "visits_30d": 11.0,
+        "active_days_30d": 27.0,
+        "premium_reads_30d": 5.0,
+        "tenure_months": 42.0,
+        "days_since_visit": 26.0,
+        "payment_failures_90d": 0.0
+      }
+    }
+  ],
+  "split": {
+    "train": 8000,
+    "validation_reserved": 2000,
+    "test": 2000
+  },
+  "training": "L2 logistic regression, NumPy gradient descent; 30-day synthetic outcomes; ordered disjoint partitions",
+  "limitations": [
+    "All reader records and outcomes are simulated, not Schibsted customer data.",
+    "Metrics measure synthetic benchmark performance, not commercial effectiveness.",
+    "Paywall rules are a policy prototype, not learned causal offer effects."
+  ],
+  "dataset_sha256": "ff53088bf2fd4e3052bbfe5f1b02fbecf5fce353680c3af49b97874cdc97d981"
+}

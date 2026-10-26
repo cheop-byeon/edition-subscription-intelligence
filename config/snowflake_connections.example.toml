@@ -1,0 +1,10 @@
+# Copy this section into ~/.snowflake/connections.toml and replace placeholders.
+# Use a sandbox database/schema and a warehouse you control. Never commit secrets.
+[edition]
+account = "YOUR_ORG-YOUR_ACCOUNT"
+user = "YOUR_USER"
+authenticator = "externalbrowser"
+role = "YOUR_SANDBOX_ROLE"
+warehouse = "YOUR_EXISTING_WAREHOUSE"
+database = "YOUR_SANDBOX_DATABASE"
+schema = "YOUR_SANDBOX_SCHEMA"

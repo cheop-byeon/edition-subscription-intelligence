@@ -24,3 +24,23 @@ artifacts/verification.json
 # Reproducible logs and local QA captures
 data/synthetic_experiment.csv
 *.jpg
+
+# Laptop-local database and journal files
+*.sqlite3
+*.sqlite3-*
+
+data/training/
+data/mlflow-artifacts/
+
+data/chat_evaluation.json
+
+.venv-mlops/
+
+.streamlit/secrets.toml
+
+.venv-analytics/
+
+config/runtime.local.json
+
+# Original KKBOX records, local numeric models, job logs and evaluation outputs
+data/kkbox/

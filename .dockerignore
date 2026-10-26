@@ -15,3 +15,8 @@ worker
 *.tar.gz
 *.jpg
 *.png
+
+archive/
+.venv-analytics/
+.venv-mlops/
+.streamlit/secrets.toml

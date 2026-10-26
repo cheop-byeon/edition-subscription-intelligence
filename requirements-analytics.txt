@@ -1,0 +1,3 @@
+-r requirements-mlops.txt
+streamlit==1.66.1
+snowflake-connector-python==4.8.0

@@ -2,9 +2,16 @@ services:
   edition:
     build: .
     ports:
-      - "127.0.0.1:4173:8080"
-    restart: unless-stopped
+      - "127.0.0.1:8501:8501"
+      - "127.0.0.1:4173:4173"
+    volumes:
+      - edition-data:/app/data
+    tmpfs:
+      - /tmp
     read_only: true
     cap_drop: [ALL]
     security_opt:
       - no-new-privileges:true
+    restart: unless-stopped
+volumes:
+  edition-data:
