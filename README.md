@@ -1,8 +1,8 @@
 # Edition · Subscription Intelligence
 
-A local machine-learning portfolio project for learning subscription analytics and demonstrating an end-to-end data science workflow: **raw subscription records → SQL features → churn models → evaluation → retention audience analysis**.
+A subscription analytics project covering an end-to-end machine-learning workflow: **raw subscription records → SQL features → churn models → evaluation → retention audience analysis**.
 
-Edition is inspired by the [Schibsted Subscription Data Enablement role](https://schibsted.teamtailor.com/jobs/8549625-data-scientist-subscription-data-enablement). It is an independent self-learning project, with no affiliation to Schibsted or Vend. Streamlit provides an interface for inspecting the work; running a public website or mobile application is not the goal.
+The project combines Python, SQL and MLflow for reproducible subscription-churn modelling, with a Streamlit interface for exploring model evidence and retention audiences.
 
 ## What the project demonstrates
 
