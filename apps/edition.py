@@ -68,7 +68,10 @@ elif page=='Paywall':
     st.info('Deferring an offer never grants paid-content access. No personalisation consent uses a contextual standard offer. Editorial exemptions and subscriptions can grant access.')
     with st.expander('Inspect illustrative brand policies'):st.json(POLICY)
 elif page=='Experiments':
-    st.header('What do the recorded outcomes show?')
+    from experiment_view import render as render_experiment
+    render_experiment()
+    st.divider()
+    st.subheader('Manual paywall exercise · descriptive counts only')
     st.caption('Current experiment: '+POLICY['version']+'. Earlier policy versions are not pooled with this experiment.')
     results=pd.DataFrame(summary['experiment'])
     results['unobserved_outcomes']=results.decisions-results.recorded_outcomes

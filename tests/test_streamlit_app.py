@@ -67,3 +67,15 @@ class StreamlitTests(unittest.TestCase):
                 self.assertGreater(len(json.loads(draft['members'])),0)
                 self.assertTrue(all(r['risk'] >= .3 for r in json.loads(draft['members'])))
                 self.assertEqual(local.execute('SELECT COUNT(*) FROM kkbox_predictions').fetchone()[0],1)
+
+    def test_simulated_experiment_analysis_renders_results(self):
+        from streamlit.testing.v1 import AppTest
+        with tempfile.TemporaryDirectory() as folder,patch.dict(os.environ,{'EDITION_DB':str(Path(folder)/'test.sqlite3')}):
+            app=AppTest.from_file(str(ROOT/'apps/edition.py')).run(timeout=20)
+            app.sidebar.radio[0].set_value('Experiments').run(timeout=20)
+            next(x for x in app.button if x.label=='Run simulated experiment').click().run(timeout=20)
+            self.assertFalse(app.exception)
+            self.assertTrue(any('Pearson' in x.value for x in app.markdown))
+            self.assertTrue(any('Newcombe' in x.value for x in app.markdown))
+            self.assertTrue(any('Synthetic experiment only' in x.value for x in app.warning))
+            self.assertTrue(any('does not demonstrate real paywall uplift' in x.value for x in app.markdown))

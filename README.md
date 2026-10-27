@@ -8,7 +8,7 @@ The project combines Python, SQL and MLflow for reproducible subscription-churn 
 
 The main workflow uses the original **KKBOX subscription-churn competition data**. It predicts non-renewal from billing history, compares two machine-learning models, tracks experiments locally and uses the selected model to construct historical research audiences.
 
-The repository also retains simulated exercises in sales propensity, paywall decisions, campaign analysis and a local LLM assistant. Their data and conclusions are kept separate from the KKBOX results.
+The project also includes simulated sales/churn propensity models, rule-based paywall decisions and randomized offer-experiment analysis. A local LLM assistant explains aggregate simulated commercial data. These exercises remain separate from the real KKBOX churn results.
 
 | Component | Implementation | Status |
 | --- | --- | --- |
@@ -17,6 +17,7 @@ The repository also retains simulated exercises in sales propensity, paywall dec
 | Churn modelling | Logistic regression and histogram gradient boosting; separate calibration | Trained on original KKBOX records locally |
 | Evaluation | Subscriber holdouts, constant baseline, ROC AUC, average precision, log loss, Brier score and calibration | Working locally |
 | Retention analysis | Score held-out subscribers, filter by risk and save audience snapshots with model/dataset lineage | Working locally; research drafts only |
+| A/B experimentation | Sample-size planning, fixed-horizon simulation, chi-square test and confidence intervals | Working locally on synthetic outcomes; no measured commercial uplift |
 | MLOps | MLflow experiment tracking, numeric JSON model export, SQLite serving registry and prediction audit | Working locally |
 | Analysis interface | One Streamlit workspace | Local use; Deploy control hidden |
 | Snowflake | Sandbox SQL, loader and local/warehouse feature parity verifier | Prepared; no account configured or live parity verified |
@@ -93,7 +94,7 @@ These are results from this local experiment, not full-dataset or publisher perf
 | Models & data | KKBOX import, training, evaluation, calibration, individual inference and lineage; additional simulated registry exercises and warehouse setup |
 | Readers & campaigns | Simulated prospects/subscribers, sales/churn scores, consent/suppression rules and draft audience exports |
 | Paywall | Simulated article-access and subscription-offer decisions |
-| Experiments | Manually recorded simulated responses; no measured causal uplift |
+| Experiments | Prospective sample-size planning, reproducible simulated reader A/B test, chi-square test and confidence intervals; manual events kept descriptive |
 | Assistant | Local LLM explanations of aggregate simulated commercial data |
 | Research | Papers, code references and implementation evidence |
 
@@ -108,6 +109,36 @@ The brand selector applies to the simulated commercial exercises. KKBOX records 
 KKBOX lacks newspaper article visits, paywall exposures, offer assignments and purchase responses. The paywall is therefore an explicit policy simulation, not a learned dynamic paywall model. Its rules separate **article entitlement** from **offer selection and timing**: deferring an offer never unlocks paid content. Prices and outcomes are illustrative.
 
 Future-month generalisation, causal offer effects and live retention improvement remain unvalidated. These require additional data and evaluation, not reinterpretation of the existing churn scores.
+
+## Simulated experiment analysis
+
+The Experiments page adds a fixed-horizon paywall-offer study with blocked 1:1
+randomization and one complete 30-day conversion outcome per fictional reader.
+An approximate two-sided sample-size calculation uses the expected baseline,
+absolute minimum detectable effect, alpha 0.05 and 80% or 90% target power.
+The generated study reports Pearson chi-square (one degree of freedom, no
+continuity correction), Wilson conversion-rate intervals and a Newcombe interval
+for the absolute treatment-minus-control difference. Sparse expected counts
+suppress the asymptotic test. Synthetic reader-level CSVs can be downloaded.
+
+To explore the example, open **Experiments**, review the baseline conversion and
+minimum detectable increase, select **Update sample-size plan**, then select
+**Run simulated experiment**. Planning inputs and the saved simulation assumptions
+are displayed separately. With the default 10% baseline, 1.5 percentage-point MDE,
+80% power and alpha 0.05, the approximate requirement is **6,693 readers per arm**.
+The default simulation uses 10,000 readers per arm and seed 42; its observed
+difference is **+1.19 percentage points**, with a 95% interval of **+0.32 to +2.06**
+and p = **0.0071**. These numbers describe a generated example whose effect was
+specified in advance, not publisher results.
+
+The seed, sample size and assumed effect make the study reproducible. The effect
+is supplied to the simulator: results demonstrate statistical analysis, not real
+paywall or retention uplift. No post-hoc power is reported. Manual paywall events
+remain descriptive and are not pooled with this experiment. Real deployment would
+require mature outcomes, validated assignment/exposure tracking and business
+guardrails. Repeated seed selection or early stopping would invalidate the stated
+fixed-horizon inference. Statistical methods follow the [NIST two-proportion test](https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/diffprci.htm)
+and [Newcombe interval reference](https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.confint_proportions_2indep.html).
 
 ## Optional integrations
 
@@ -152,7 +183,7 @@ With the main dependencies installed:
 .venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-Tests generate clearly marked synthetic fixtures to exercise the official KKBOX schema without redistributing restricted data. They cover pre-cutoff feature construction, import rollback/idempotency, subscriber splits, portable inference parity, prediction persistence and the integrated retention draft workflow. Fixture accuracy is not real-data benchmark evidence. Optional warehouse tests require `requirements-analytics.txt`; live Snowflake parity requires an account and is separate from mocked checks.
+Tests generate clearly marked synthetic fixtures to exercise the official KKBOX schema without redistributing restricted data. They cover pre-cutoff feature construction, import rollback/idempotency, subscriber splits, portable inference parity, prediction persistence, the integrated retention draft workflow, known-value statistical calculations and experiment-page rendering. Fixture accuracy is not real-data benchmark evidence. Optional warehouse tests require `requirements-analytics.txt`; live Snowflake parity requires an account and is separate from mocked checks.
 
 GitHub Actions runs Python 3.12/3.14 checks, analytics/Streamlit tests and container smoke checks. The existing delivery workflow also publishes validated container images to GHCR on main/version-tag pushes; it does **not** deploy a website. Local portfolio use needs no container or deployment. Optional container instructions are in `compose.yaml`; its runtime does not bundle original KKBOX data, training dependencies, MLflow or Ollama services.
 
